@@ -5,20 +5,20 @@
 class Ktea < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.1/ktea_0.0.1_darwin_amd64.tar.gz"
-    sha256 "1221f9072ea6d7603aee5f0b63c8d2029d6a423a0558d679b0a4cc0f2b15e1af"
+    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_amd64.tar.gz"
+    sha256 "9f4b4e504f49d218e0a075272d2bd057057741d710a893c5a0a243860444deb7"
 
     def install
       bin.install "ktea"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.1/ktea_0.0.1_darwin_arm64.tar.gz"
-    sha256 "77db7baba02064b8aeaef367b817b44d58b7caf14e739824b6e36927088565cc"
+    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_arm64.tar.gz"
+    sha256 "1e619bc78278e22f0f9d3d87bee0f29665e9080392d35c2c683689bc74ea126f"
 
     def install
       bin.install "ktea"
