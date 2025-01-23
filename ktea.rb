@@ -6,22 +6,56 @@ class Ktea < Formula
   desc ""
   homepage ""
   version "0.0.2"
-  depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_amd64.tar.gz"
-    sha256 "9f4b4e504f49d218e0a075272d2bd057057741d710a893c5a0a243860444deb7"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_amd64.tar.gz"
+      sha256 "188af41a9f53bfb1d3b416c3ce222761e48a41f6d2bc71a3dcafa90ab4fb0660"
 
-    def install
-      bin.install "ktea"
+      def install
+        bin.install "ktea"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_arm64.tar.gz"
+      sha256 "434511739dab99b7935e62d98dcd119c4a9ee1a5dec41395c514c2e467c75040"
+
+      def install
+        bin.install "ktea"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_arm64.tar.gz"
-    sha256 "1e619bc78278e22f0f9d3d87bee0f29665e9080392d35c2c683689bc74ea126f"
 
-    def install
-      bin.install "ktea"
+  on_linux do
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_amd64.tar.gz"
+        sha256 "2227c85e5c8e269114c4f55737a5b32282f23f6b80067fbd61e4f66f97497fc3"
+
+        def install
+          bin.install "ktea"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_arm.tar.gz"
+        sha256 "e7557d4cbbfd0876a12bcfe94ff9cac5158d4512f7d59d28d3f72760206dbafd"
+
+        def install
+          bin.install "ktea"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_arm64.tar.gz"
+        sha256 "c698ab6ec550e3d942d23202db69f3fb8d3b0f1075bb64118d9df1e79b938f7d"
+
+        def install
+          bin.install "ktea"
+        end
+      end
     end
   end
 end
