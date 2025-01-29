@@ -5,20 +5,20 @@
 class Ktea < Formula
   desc "Kafka Terminal UI"
   homepage "https://github.com/jonas-grgt/ktea"
-  version "0.0.2"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_amd64.tar.gz"
-      sha256 "2b1634f07d1e7a5f09cbeb2e79a329d343e3f0b921044cdbf0a036042d37c8d1"
+      url "https://github.com/jonas-grgt/ktea/releases/download/v0.1.0/ktea_0.1.0_darwin_amd64.tar.gz"
+      sha256 "d7ee4451d38ea46a24dd5ca62dcccd7aaaca65daeedb6aa6fe6335509401cc2a"
 
       def install
         bin.install "ktea"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_darwin_arm64.tar.gz"
-      sha256 "f954413320e45a90a25158ab7a9ea6c9726d8f0b265dc9f78236b96e08684520"
+      url "https://github.com/jonas-grgt/ktea/releases/download/v0.1.0/ktea_0.1.0_darwin_arm64.tar.gz"
+      sha256 "3c01d5ee4a6709a54ee8073266ecc36a3066943f556fed4c30e0fc7c193c6bb4"
 
       def install
         bin.install "ktea"
@@ -29,8 +29,8 @@ class Ktea < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_amd64.tar.gz"
-        sha256 "f03f2857d8b86504d337dafe5316f3adf5b33b193376bfec0a5ef622224a3c79"
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.1.0/ktea_0.1.0_linux_amd64.tar.gz"
+        sha256 "148d2ba82af0113d3ab7b90b3d1e957e8cfaf37010a27a673345956ee3c04c6d"
 
         def install
           bin.install "ktea"
@@ -39,8 +39,8 @@ class Ktea < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_arm.tar.gz"
-        sha256 "8fdac8486c883557273322d3eac2e5c8cca5173198de5b3e887a632516a1cb99"
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.1.0/ktea_0.1.0_linux_arm.tar.gz"
+        sha256 "b254377268e91c957a7ca511e35a7acdba92d8280f7fb1d0c17501eec57d77ba"
 
         def install
           bin.install "ktea"
@@ -49,8 +49,8 @@ class Ktea < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jonas-grgt/ktea/releases/download/v0.0.2/ktea_0.0.2_linux_arm64.tar.gz"
-        sha256 "8aa1717449a343d1a72b172ad2e89f932778c0102d081fc963f0dd234f8a43b0"
+        url "https://github.com/jonas-grgt/ktea/releases/download/v0.1.0/ktea_0.1.0_linux_arm64.tar.gz"
+        sha256 "6364251f04eb8a9e74fb37024d500940349e0334cccb92d723161840494292b4"
 
         def install
           bin.install "ktea"
