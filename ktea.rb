@@ -10,7 +10,7 @@ class Ktea < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jonas-grgt/ktea/releases/download/v0.3.0/ktea_0.3.0_darwin_amd64.tar.gz"
-      sha256 "7757224caf0cce435d1d3fd51fef7b30187ffa28bb41aaf86760726c5653e289"
+      sha256 "b5b8fd6c96cfbef20e23ee6ced4dc043e7aacdb109a4c8f1d61325354853753d"
 
       def install
         bin.install "ktea"
@@ -18,7 +18,7 @@ class Ktea < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jonas-grgt/ktea/releases/download/v0.3.0/ktea_0.3.0_darwin_arm64.tar.gz"
-      sha256 "89911293bc0fb229d94338116e52ed10ce10848643893054448a038c5eec26f6"
+      sha256 "a74b525a5459d970aed59d363be635bf02f4b292e474ee1f0ad9a9bb79abc9ab"
 
       def install
         bin.install "ktea"
@@ -30,7 +30,7 @@ class Ktea < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jonas-grgt/ktea/releases/download/v0.3.0/ktea_0.3.0_linux_amd64.tar.gz"
-        sha256 "f39277f324e275877c17f59b60263704e6f1b03e41e634beb02e5b958faadc15"
+        sha256 "f29b8ad5274efab52373dddf0ca6d6952daf2d3db0c68269d748b22fe7d42115"
 
         def install
           bin.install "ktea"
@@ -40,7 +40,7 @@ class Ktea < Formula
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
         url "https://github.com/jonas-grgt/ktea/releases/download/v0.3.0/ktea_0.3.0_linux_arm.tar.gz"
-        sha256 "36a5151e49ab853f5f990a86daa9aedbca5199249d46c4a83540409c9843f916"
+        sha256 "cdb55c258355c45f77318f57262357c4eab9ecdadc39afab74d124dbd9bac458"
 
         def install
           bin.install "ktea"
@@ -50,7 +50,7 @@ class Ktea < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/jonas-grgt/ktea/releases/download/v0.3.0/ktea_0.3.0_linux_arm64.tar.gz"
-        sha256 "08933d62e6e645da73d80418c5c1ec6fcee9dfbc60f798f4f047605e909a387c"
+        sha256 "4a14d9642e87cd115262f5eb5e3e1674836d6d5a929113131bcfed2b439c910f"
 
         def install
           bin.install "ktea"
